@@ -1,0 +1,681 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+/* You must use a DIFFERENT FONT THAT THIS ONE as your webfont */
+
+/*************************************************
+            DEFAULTS
+*************************************************/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+*::after,
+*::before{
+    box-sizing: inherit;
+}
+html{
+    font-size: 16px;
+    font-family: Montserrat, Helvetica, Arial, sans-serif;
+    /* change this font stack to your own choices */
+    line-height: 1.5;
+}
+p{
+    padding-bottom: 1rem;
+    
+    text-align: justify;
+}
+a{
+text-decoration-color: none;
+    }
+ul{
+    
+}
+ol{
+      
+}
+li{
+
+    
+}
+img{
+    width: 25%;
+    
+}
+.mast{
+    background-image: url(/img/p1.png);
+    display: flex;
+    justify-content: space-around;
+    background-attachment: fixed;
+    margin:2rem;
+    background-size: cover;
+}
+
+/*
+.mast h1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 5rem;
+    font-size: 5rem;
+    margin-left: 3rem;
+}
+
+.mast h2 {
+justify-content: flex-end;
+    margin-top: 5rem;
+    font-size: 5rem;
+
+    
+}
+*/
+
+/*************************************************
+            HEADER
+*************************************************/
+header{
+    padding: 1rem 2rem;
+    color: black;
+    background-size: cover;
+    background:none;
+    
+}
+
+
+header > h1{
+
+     color: hsl(101deg,50%,50%);
+     font-family: fantasy;
+     font-size: 2rem;
+     padding: 4rem 0rem 1rem 0rem;
+}
+header > h2{
+
+    color: hsl(101deg,50%,50%);
+    font-family: fantasy;
+    font-size: 2rem;
+    padding: 1rem 0rem 4rem 0rem;
+    
+    
+}
+/*************************************************
+            NAVMENU
+*************************************************/
+nav{
+    padding:1rem 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: rgb(200,200,200);
+    
+    
+    
+    
+}
+nav > a,
+nav > a:visited,
+nav > a:link{
+    padding: 0.4rem;
+
+    
+}
+nav > a:active,
+nav > a:focus,
+nav > a:hover{
+    font-weight:normal;
+    text-decoration:none;
+    color: cadetblue;
+    font-weight: bolder;
+}
+
+/*************************************************
+            MAIN CONTENT
+*************************************************/
+main{
+    padding: 1rem 2rem;
+    
+}
+section{
+    
+    display: grid;
+    grid-template-columns: 2ftr 2ftr;
+
+
+}
+section p{
+    text-align:justify;
+}
+    
+section p img{
+}
+.primary{
+    background-image: url(/img/f1.jpg);
+    background-attachment: fixed;
+}
+/*************************************************
+            FOOTER
+*************************************************/
+footer{
+border-top: 1rem solid;
+    
+display: flex;
+  
+    
+
+}
+.foot nav{
+    display: flex;
+    
+    
+    
+    
+}
+.foot section{
+    padding: 1rem 2rem;
+    background-color: rgb(214, 171, 171);
+    
+}
+.foot dl{
+
+    
+
+}
+.foot dt{
+    font-size: 3rem;
+    color:black;
+ 
+
+    
+   
+}
+.foot dd{
+font-size: 2rem;
+    color:darkred;
+    
+        
+
+   
+
+}
+.foot dd a,
+.foot dd a:visited{
+
+    
+}
+.foot dd a:active,
+.foot dd a:focus,
+.foot dd a:hover{
+    font-weight:normal;
+    text-decoration:underline;
+    }
+
+button{
+    background-color: rgb(103,103,103);
+    color: rgb(255,255,255)
+    }
+form .form-box,input{
+    margin: 0rem 0rem 1rem 0rem;
+}
+form .form-box,input,select,textarea,button{
+    padding: 0.5rem;
+    border: 1px solid rgb(220,220,220)
+    }
+
+/*************************************************
+            MEDIA QUERIES for layout
+*************************************************/
+@media (max-width: 599px){
+    
+    .mainnav{
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    nav > a:active,
+    nav > a:focus,
+    nav > a:hover{
+        color: rgb(150,0,180);
+    }
+    .subnav a:hover,
+    .subnav a:focus,
+    .subnav a:active{
+        color: rgb(150,0,180);
+    }
+    header{
+        background-image:url(../img/final1.jpeg);
+        border-top: 1.5rem solid rgb(150,0,180);
+        }
+    header h1,header h2{
+        color:rgb(88,88,88);
+        padding: 0rem 0rem 0.5rem;
+        font-size:5rem;
+    }
+    
+    .primary{
+        grid-template-areas: 
+            "a" 
+            "b"
+            "c"
+            "d"
+            "e";
+    }
+    .first{
+        grid-area: a;
+    }
+    .second{
+        grid-area: b;
+    }
+    .third{
+        grid-area: c;
+     }
+    .four{
+        grid-area: d;
+     }
+    .five{
+        grid-area: e;
+     }
+    
+    
+    
+    
+    
+    .mainnav a{
+        border-bottom: 1px solid rgb(10,10,10);
+        color:rgb(10,10,10);
+    } 
+    section{
+    
+    display: grid;
+    grid-template-columns: 1ftr 1ftr;
+
+
+     }
+    header h1,header h2{
+        color : rgb(150,0,180);
+    }
+    section p{
+          text-align:justify;
+        color:whitesmoke;
+     }
+    section p img{
+        width: 60%;
+        float: left;padding: 0rem 1rem 0rem 0rem;
+    }
+    
+    form .form-box input,select,textarea,button{
+        widows: 100%;
+        border: 1px solid rgb(10,10,10);
+    }
+    footer{
+        border-color: rgb(150,0,180);
+        flex-direction: column-reverse;
+    }
+    main h1{
+        margin-bottom: 1rem;
+        color:whitesmoke;
+    }
+    main h2{
+        margin-bottom: 0.5rem;
+        color:whitesmoke;
+    }
+    
+    .foot{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .subnav{
+        display: flex;
+        flex-direction:column;
+    }
+    .docs{
+        order: -2;
+    }
+    
+    .social{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    
+    
+    .thumbnail{
+        display: flex;
+        flex-direction: row;
+        padding: 1rem;
+        justify-content: space-between;
+        max-height: 100px !important;
+        max-width: 100PX;
+    }
+    section p img{
+        width: 30%;}
+}
+
+
+.mast h2 {
+    font-size: 2rem;
+     margin-top:2rem;
+    
+}
+header h1,header h2{
+        color: rgb(14, 1, 1);
+        padding: 0rem 0rem 0.5rem;
+    }
+@media (min-width: 600px) and (max-width:999px){
+    header{
+        background-image:url(../img/final3.jpeg);
+        border-top: 2rem solid rgb(150,0,180);
+    }
+    header h1,header h2{
+        color : rgb(150,0,180);
+    }
+    nav > a:active,
+    nav > a:focus,
+    nav > a:hover{
+        color: rgb(150,0,180);
+    }
+    .subnav a:hover,
+    .subnav a:focus,
+    .subnav a:active{
+        color: rgb(150,0,180);
+    }
+    .primary{
+        display: grid;
+        grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+            "a a a a a"
+            "b b b b b"
+
+            "c c c c c"
+            "d d d d d"
+            "e e e e e";
+        grid-gap: 1.5rem;
+            
+    }
+    .first{
+        grid-area: a;
+    }
+    .second{
+        grid-area: b;
+    }
+    .third{
+        grid-area: c;
+     }
+    .four{
+        grid-area: c;
+     }
+    .five{
+        grid-area: c;
+     }
+    .mainnav a{
+        color:rgb(102,102,102);
+    } 
+    section{
+    
+    display: grid;
+    grid-template-columns: 1ftr 1ftr;
+
+
+   }
+     section p{
+     text-align:justify;
+         color:whitesmoke;
+}
+    section p img{
+        width: 20%;
+        float: left;
+        padding: 0rem 1rem 0rem 0rem;
+    }
+    .second img,.third img{
+        width: 20%;
+        padding: 0rem 0rem 2rem 0rem;
+    }
+    .primary{
+        grid-template-columns: 1ftr 1ftr;
+        grid-template-areas: 
+        margin-left:2rem;
+        
+    }
+    .sunnav{
+        color: rgb(102,102,102);
+    }
+
+    .first{
+        grid-area: a;
+    }
+    .second{
+        grid-area: b;
+    }
+    .third{
+        grid-area: c;
+    }
+    .four{
+        grid-area: d;
+    }
+    .five{
+        grid-area: e;
+    }
+    form .form-box input,select,textarea,button{
+        widows: 100%;
+        border: 1px solid rgb(10,10,10);
+    }
+    footer{
+        border-color: rgb(150,0,180);
+        flex-direction: column-reverse;
+    }
+    .mast h1{
+        display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 5rem;
+    font-size: 1rem;
+    margin-left: 3rem;
+        
+    }
+    .mast h2{
+       display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 5rem;
+    font-size: 1rem;
+    margin-left: 3rem;
+    }
+        main h1{
+        margin-bottom: 1rem;
+        color:whitesmoke;
+    }
+    main h2{
+        margin-bottom: 0.5rem;
+        color:whitesmoke;
+    }
+    
+    .foot{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .social{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        order: 2;
+        align-content: center;
+        text-align: center;
+    }
+    
+    .thumbnail{
+        max-height: 200px;
+        max-width: 200px;
+    }
+}
+.mainnav a {
+    color: rgb(14, 1, 1);
+}
+nav{
+    background-color: rgb(214, 171, 171);
+}
+
+section p img {
+    width: 20%;
+}
+header h1,header h2{
+        color: rgb(14, 1, 1);
+        padding: 0rem 0rem 0.5rem;
+    }
+
+
+
+
+@media (min-width: 1000px){
+    .mainnav{
+        flex-direction: row;
+        justify-content: space-around;
+        background-color: rgb(214, 171, 171);
+    }
+    header{
+       
+        border-top: 1.5rem solid rgb(150,0,180);
+;
+        }
+    header h1,header h2{
+        color: rgb(14, 1, 1);
+        padding: 0rem 0rem 0.5rem;
+    }
+    nav > a:active,
+    nav > a:focus,
+    nav > a:hover{
+        color: rgb(150, 0, 180);
+    }
+    .subnav a:hover,
+    .subnav a:focus,
+    .subnav a:active{
+        color: rgb(150,0,180);
+    }
+    .primary{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+            "a b "
+            "c d" ;
+        grid-gap: 1.5rem;
+        align-items: flex-start;
+            
+    }
+    .first{
+        grid-area: a;
+    }
+    .second{
+        grid-area: b;
+    }
+    .third{
+        grid-area: c;
+     }
+    .four{
+        grid-area: d;
+     }
+    .mainnav a{
+        color:rgb(102,102,102);
+    } 
+    section{
+    
+    display: grid;
+    grid-template-columns: 1ftr 1ftr;
+
+    }
+    section p{
+    text-align:justify;
+        color:whitesmoke;
+    }
+    section p img{
+        width: 30%;
+        float: left;padding: 0rem 1rem 0rem 0rem;
+    }
+    .subnav{
+        grid-template-columns: 1ftr 1ftr;
+        grid-template-areas: "a b";
+        background-color: hsl(327, 46%, 79%);
+    }
+    
+    .docs{
+        grid-area: a;
+    }
+    .channles{
+        grid-area: b;
+    }
+    form .form-box input,select,textarea,button{
+        widows: 100%;
+        border: 1px solid rgb(10,10,10);
+    }
+    footer{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+            "p p q q r";
+        border-color: rgb(150,0,180);
+/*        background-color: rgb(200,200,200);*/
+/*          background-image: url(/img/f1.jpg);*/
+    }
+    .subnav{
+        grid-area: p;
+        background-color:rgb(214, 171, 171);
+    }
+    .comments{
+        grid-area: q;
+    }
+    .social{
+        grid-area: r;
+    }
+    
+    .thumbnail{
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        max-height: 400px;
+        max-width:400px;
+        padding: 1rem;
+    }
+    main h1,main h2{
+        margin-bottom: 1rem;
+        color:whitesmoke;
+        font-size: 3rem;
+    }
+}mast{
+    background-image: url(/img/p1.png);
+    display: flex;
+    justify-content: space-around;
+    background-attachment: fixed;
+    margin:2rem;
+    background-size: cover;
+    background-color: cadetblue;
+}
+
+.mast h1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 1.5rem;
+    font-size: 3rem;
+    margin-left: 3rem;
+    margin-top:1rem;
+}
+
+ .mast h2 {
+justify-content: flex-end;
+    margin-bottom: 5rem;
+    font-size: 3rem;
+     font-size: 1.5rem;
+     margin-top:2rem;
+
+    
+}
+.mainnav a {
+    color: rgb(14, 1, 1);
+}
+.social {
+   
+    padding-left: 8rem;
+}
+.foot dt {
+    
+    padding-right: 9rem;
+}
